@@ -71,6 +71,10 @@ async function generatePackageJSON({
             types: "./index.d.cts",
             default: "./index.cjs",
           },
+          node: {
+            types: "./index.d.cts",
+            default: "./index.cjs",
+          },
           import: {
             types: "./index.d.ts",
             default: "./index.js",
@@ -105,6 +109,10 @@ function mapPublishExports(paths: string[], prefix = ".") {
       pth,
       {
         require: {
+          types: `${pth}.d.cts`,
+          default: `${pth}.cjs`,
+        },
+        node: {
           types: `${pth}.d.cts`,
           default: `${pth}.cjs`,
         },
